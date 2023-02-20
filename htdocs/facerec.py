@@ -38,7 +38,7 @@ def fun():
     global known_id, known_face_encodings, known_face_names
     print(known_face_encodings,known_id,known_face_names)
     dt = datetime.datetime.now()
-    video_capture = cv2.VideoCapture(1)
+    video_capture = cv2.VideoCapture(0)
 
     print("done loading")
     face_locations = []
