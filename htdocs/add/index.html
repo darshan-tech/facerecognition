@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<style>
+    body{
+        background-color:coral;
+    }
+
+    h1{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contain{
+        margin-top: 175px;
+        max-width: 80%;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label{
+        font-size: 24px;
+    }
+
+    #uimg{
+        margin-left: 100px;
+    }
+
+    #sub{
+        font-size: 24px;
+    }
+
+    table,td{
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    tr{
+        height: 50px;
+    }
+
+    td{
+        width: 25%;
+    }
+    
+    img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+</style>
+<body>
+    <h1>Add Student</h1>
+    <div class="contain">
+        <form action="addStudent.php" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>
+                        <label for="uname">Student Name : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="uname" id="uname"><br>
+                    </td>
+                    <td rowspan="3">
+                        <label for="uimg">Student picture</label><br>
+                        <input type="file" accept="image/*" onchange="loadFile(event)" name="uimg" id="uimg"><br>
+                        <img id="output"/><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="uid">Student ID : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="uid" id="uid"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="clas">Class : </label>
+                    </td>
+                    <td>
+                        <input type="text" name="clas" id="clas"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input id="sub" type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+            <!-- <label for="uname">Student Name : </label>
+            <input type="text" name="uname" id="uname"><br> -->
+            <!-- <label for="uid">Student ID : </label>
+            <input type="text" name="uid" id="uid"><br> -->
+            <!-- <label for="clas">Class : </label>
+            <input type="text" name="clas" id="clas"><br> -->
+            <!-- <label for="uimg">Student picture</label>
+            <input type="file" name="uimg" id="uimg"><br> -->
+            <!-- <input id="sub" type="submit" value="Submit"> -->
+        </form>
+    </div>
+</body>
+<script>
+    var loadFile = function(event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+      }
+    };
+  </script>
+</html>

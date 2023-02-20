@@ -1,0 +1,18 @@
+
+ www.w3schools.com
+ table w3schools
+
+title - Face detection management
+
+body :
+    page 2:(login/logout-details)
+        table - with sl.no , Student_id , Student-name , login_time_and_date 
+    page1:(main-screen)
+        icon/images - add_Student , remove_Student , Student_details ,login/logout-details
+    page3:(add_Student)
+        input - Student-id , Student-name , class , Student-photo
+    page4:(remove-Student)
+         list - Student-id,Student-name -> select the row and click on delete button
+    page5:(Student-details)
+        display-table - Student-id , Student-name , Student-photo , no of working days
+        

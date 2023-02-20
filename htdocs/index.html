@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+</head>
+<style>
+        body{
+        background-color: #8C92AC;
+        font-size: 18px;
+    }
+
+    .contain{
+        background-color: beige;
+        max-width: 800px;
+        height: 250px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        box-shadow: 15px 15px 15px;
+    }
+
+    h1{
+        cursor: default;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img{
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 15px;
+        max-width: 175px;
+    }
+
+    td{
+        font-size: 20px;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <h1>Face Detection Student Administration</h1>
+    <div class="contain">
+        <table>
+            <tr>
+                <td><img src="images/adduser.svg" onclick="addu()"></td>
+                <td><img src="images/remove.png" onclick="removeu()"></td>
+                <td><img src="images/userman.png" onclick="usermanu()"></td>
+                <td><img src="images/clock.png" onclick="udetails()"></td>
+            </tr>
+            <tr>
+                <td>Add Student</td>
+                <td>Remove Student</td>
+                <td>Manage Student</td>
+                <td>Login Details</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function addu()
+    {
+        window.location.href="/add";
+    }
+    function removeu()
+    {
+        window.location.href="/remove";
+    }
+    function usermanu()
+    {
+        window.location.href="/management";
+    }
+    function udetails()
+    {
+        window.location.href="/details";
+    }
+</script>
+</html>
